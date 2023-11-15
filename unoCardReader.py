@@ -5,7 +5,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras import models, layers
 import json
 
-dataset_path = 'Documents/unoCardDetectionUsingCNN/myDataset' #getting the path to the dataset
+dataset_path = 'myDataset' #getting the path to the dataset
 
 train_datagen = ImageDataGenerator( #image processing
     rescale=1./255,
@@ -55,3 +55,10 @@ history = model.fit(
     verbose=1
 )
 print(type(history))
+
+#saving model
+#Uno_json = history.to_json()
+#with open("UNO_CNN_Model.json", "w") as json_file:
+ #   json_file.write(Uno_json)
+#CNN_Uno_model.save_weights("UNO_CNN_Model.h5")
+#print("Saved model to disk")
