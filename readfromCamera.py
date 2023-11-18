@@ -52,11 +52,9 @@ while True:
     ret, frame = cap.read()
     # Crop cards from the frame
     card_boxes = crop_cards(frame)
-# Perform any required preprocessing on the frame before prediction
+    # Perform any required preprocessing on the frame before prediction
     for box in card_boxes:
         cv2.rectangle(frame, (box[0], box[1]), (box[2], box[3]), (0, 255, 0), 2)
-
-    # ... (your previous code)
 
     # Display the frame
     cv2.imshow("Card Detection", frame)
