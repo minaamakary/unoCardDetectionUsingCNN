@@ -14,6 +14,7 @@ train_datagen = ImageDataGenerator( #image processing
     shear_range=0.2,
     zoom_range=0.2,
     horizontal_flip=True
+    
 )
 
 train_generator = train_datagen.flow_from_directory(
